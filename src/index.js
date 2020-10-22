@@ -12,8 +12,9 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true,
+      nodeIntegration: true, // Need to use Buffer.from
       enableRemoteModule: true,
+      // preload: path.join(app.getAppPath(), 'src', 'preload.js'),
     },
   });
 
